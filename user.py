@@ -14,7 +14,7 @@ class User:
         print(f"<Username: {self.username}>")
 
 
-user = User(username="ram", password="ram!")
+# user = User(username="ram", password="ram!")
 
 
 class UserManager:
