@@ -19,3 +19,8 @@ class Authentication:
             return True
         else:
             return False
+
+
+auth = Authentication()
+# auth.register(username="ganesh", password="ganesh!")
+print(auth.authenticate(username="dfdf", password="radfdfm!"))

@@ -1,5 +1,5 @@
 from todo_application import TodoApplication
-from user import new_user
+from user import User
 
 # user Class # 2 Class task # Seperation of Concerns
 # task related work put in Class task
