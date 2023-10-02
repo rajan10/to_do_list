@@ -46,8 +46,6 @@ class UserManager:
                 return user
 
 
-# ram = User(username="ram", password="ram!")
+user = User(username="hari", password="hari!")
 
-# user1 = UserManager()
-# user1.save_user(user=ram)
-# user1.load_users()
+user_manager = UserManager()

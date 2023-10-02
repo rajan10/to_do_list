@@ -7,7 +7,7 @@ class TodoApplication:
     def __init__(self):
         self.user_manager = UserManager()  # manages users that use the app
         self.task_manager = None
-        self.authenticator = Authentication(self.user_manager)
+        self.authenticator = Authentication()
 
     def create_task_manager(
         self, user

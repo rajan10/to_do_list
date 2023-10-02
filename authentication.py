@@ -21,6 +21,6 @@ class Authentication:
             return False
 
 
-auth = Authentication()
+# auth = Authentication()
 # auth.register(username="ganesh", password="ganesh!")
-print(auth.authenticate(username="dfdf", password="radfdfm!"))
+# print(auth.authenticate(username="dfdf", password="radfdfm!"))

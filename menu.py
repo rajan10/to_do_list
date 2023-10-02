@@ -1,5 +1,6 @@
 from todo_application import TodoApplication
 from user import User
+from user import UserManager
 
 # user Class # 2 Class task # Seperation of Concerns
 # task related work put in Class task
@@ -11,13 +12,13 @@ from user import User
 # make task Class
 
 #
+app = TodoApplication()
 
 
 def menu_display():
-    app = TodoApplication()
     while True:
-        if new_user.logged_in_user:
-            print(f"\nLogged in as {new_user.logged_in_user}")
+        if app.user_manager.user:
+            print(f"\nLogged in as {app.user_manager.user}")
             print("1. Create Task")
             print("2. View Tasks")
             print("3. Update Task")
@@ -48,7 +49,7 @@ def menu_display():
                 app.delete_task(task_index)
 
             elif choice == "5":
-                new_user.logout()
+                app.logout_user()
 
         else:
             print("\nTodo List Menu:")
@@ -60,13 +61,13 @@ def menu_display():
             if choice == "1":
                 username = input("Enter your username: ")
                 password = input("Enter your password: ")
-                new_user.register(username, password)
+                app.register_user(username, password)
 
             elif choice == "2":
                 username = input("Enter your username: ")
                 password = input("Enter your password: ")
 
-                if new_user.login(username, password):
+                if app.login_user(username, password):
                     print(f"Welcome, {username}!")
                 else:
                     print("Login failed. Check your credentials.")
